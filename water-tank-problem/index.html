@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EverQuint - Water Tank Problem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>EverQuint</h1>
+            <p class="subtitle">Interview Assignment</p>
+        </header>
+
+        <h2>Water Tank Problem</h2>
+        <p class="description">
+            Enter block heights separated by commas to calculate
+            the units of water trapped between the blocks.
+        </p>
+
+        <label for="heights">Block Heights</label>
+        <input
+            type="text"
+            id="heights"
+            value="0,4,0,0,0,6,0,6,4,0"
+            placeholder="Example: 0,4,0,0,0,6,6,4,0"
+        >
+
+        <button id="calculateBtn">Calculate Water</button>
+
+        <p id="error" role="alert"></p>
+
+        <section class="result">
+            <h3>Total Water Stored</h3>
+            <p id="total">0 Units</p>
+        </section>
+
+        <div class="legend">
+            <span><i class="block-key"></i> Blocks</span>
+            <span><i class="water-key"></i> Trapped Water</span>
+        </div>
+
+        <div class="chart-container">
+            <svg id="chart"
+                 role="img"
+                 aria-label="Visualization of blocks and trapped water">
+            </svg>
+        </div>
+
+        <p class="note">
+            Yellow represents blocks. Blue represents trapped water.
+        </p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
